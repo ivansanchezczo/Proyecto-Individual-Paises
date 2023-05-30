@@ -1,11 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Landing from "./components/Landing/Landing";
 import { useLocation } from "react-router-dom";
-import Nav from "./components/Nav/Nav"
-import Detail from "./components/Detail/Detail";
-import Home from './components/Home/Home';
-import Form from './components/Activity/Form';
+import Landing from "./components/Landing/Landing"
+import Formulario from "./components/Form/Formulario"
+import Home from "./components/Home/Home"
 
 
 
@@ -21,10 +19,10 @@ function App() {
 
       <Routes>
 
-        <Route exact path="" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/countries/:id" element={<Detail />} />
-        <Route path='/activities' element={<Form />} />
+        {/* <Route path="/countries/:id" element={<Detail />} /> */}
+        <Route path='/activities' element={<Formulario/>} />
 
 
       </Routes>
